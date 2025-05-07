@@ -1,0 +1,8 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="amoebaClip">
+      <path d="M50,50 C150,-40 250,40 280,120 C300,200 200,300 100,280 C10,260 -20,180 50,50 Z"/>
+    </clipPath>
+  </defs>
+  <rect width="100%" height="100%" clip-path="url(#amoebaClip)" fill="black"/>
+</svg>
