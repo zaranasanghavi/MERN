@@ -18,7 +18,7 @@ const ReportLost = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get("http://https://mern-jvn8.onrender.com/api/lost/categories");
+        const response = await axios.get("https://mern-jvn8.onrender.com/api/lost/categories");
         setCategories(Array.isArray(response.data) ? response.data : []);
       } catch (err) {
         console.error("Error fetching categories:", err);
@@ -36,7 +36,7 @@ const ReportLost = () => {
           return;
         }
 
-        const response = await axios.get("http://https://mern-jvn8.onrender.com/api/auth/user", {
+        const response = await axios.get("https://mern-jvn8.onrender.com/api/auth/user", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -77,7 +77,7 @@ const ReportLost = () => {
     if (image) formData.append("image", image);
 
     try {
-      await axios.post("http://https://mern-jvn8.onrender.com/api/lost/report", formData, {
+      await axios.post("https://mern-jvn8.onrender.com/api/lost/report", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
