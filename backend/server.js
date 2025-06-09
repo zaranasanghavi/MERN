@@ -16,6 +16,11 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.use(cors({
+  origin: 'https://mern-seven-pi.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 
 // Middleware
 app.use(express.json());
