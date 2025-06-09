@@ -15,7 +15,7 @@ const NotificationsPage = () => {
         const token = localStorage.getItem("token");
         if (!token) return (window.location.href = "/login");
 
-        const res = await axios.get("http://localhost:5000/api/auth/user", {
+        const res = await axios.get("http://https://mern-jvn8.onrender.com/api/auth/user", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -33,7 +33,7 @@ const NotificationsPage = () => {
       const token = localStorage.getItem("token");
       if (!userId || !token) return;
 
-      const res = await axios.get(`http://localhost:5000/api/notifications/${userId}`, {
+      const res = await axios.get(`http://https://mern-jvn8.onrender.com/api/notifications/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -51,7 +51,7 @@ const NotificationsPage = () => {
       if (!token) return;
 
       await axios.put(
-        `http://localhost:5000/api/notifications/${notificationId}/status`,
+        `http://https://mern-jvn8.onrender.com/api/notifications/${notificationId}/status`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
