@@ -24,17 +24,17 @@ const Dashboard = () => {
       }
 
       try {
-        const { data: userData } = await axios.get("http://localhost:5000/api/auth/user", {
+        const { data: userData } = await axios.get("http://https://mern-jvn8.onrender.com/api/auth/user", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(userData);
 
-        const { data: lostData } = await axios.get("http://localhost:5000/api/lost/user/lostitems", {
+        const { data: lostData } = await axios.get("http://https://mern-jvn8.onrender.com/api/lost/user/lostitems", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setLostItems(lostData);
 
-        const { data: foundData } = await axios.get("http://localhost:5000/api/found/user/founditems", {
+        const { data: foundData } = await axios.get("http://https://mern-jvn8.onrender.com/api/found/user/founditems", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFoundItems(foundData);
@@ -61,7 +61,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/lost/${editForm._id}`,
+        `http://https://mern-jvn8.onrender.com/api/lost/${editForm._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -87,7 +87,7 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/found/${editFoundForm._id}`,
+        `http://https://mern-jvn8.onrender.com/api/found/${editFoundForm._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
