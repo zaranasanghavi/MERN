@@ -7,7 +7,7 @@ const LostItems = () => {
   useEffect(() => {
     const fetchLostItems = async () => {
       try {
-        const response = await axios.get("http://https://mern-jvn8.onrender.com/api/lost");
+        const response = await axios.get("https://mern-jvn8.onrender.com/api/lost");
         setLostItems(response.data);
       } catch (error) {
         console.error("Error fetching lost items:", error);
