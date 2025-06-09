@@ -30,7 +30,7 @@ const Register = () => {
   
     try {
       const response = await axios.post(
-        "http://https://mern-jvn8.onrender.com/api/auth/register",
+        "https://mern-jvn8.onrender.com/api/auth/register",
         { name, sapId, department, phone, email, password },
         { headers: { "Content-Type": "application/json" } }
       );
