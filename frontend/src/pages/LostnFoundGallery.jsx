@@ -21,7 +21,7 @@ const LostAndFoundGallery = () => {
       if (!token) return;
 
       await axios.post(
-        "http://localhost:5000/api/notifications",
+        "http://https://mern-jvn8.onrender.com/api/notifications",
         { userId: recipientId, itemName, message },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -35,8 +35,8 @@ const LostAndFoundGallery = () => {
     const fetchItems = async () => {
       try {
         const [lostRes, foundRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/lost"),
-          axios.get("http://localhost:5000/api/found"),
+          axios.get("http://https://mern-jvn8.onrender.com/api/lost"),
+          axios.get("http://https://mern-jvn8.onrender.com/api/found"),
         ]);
         setLostItems(lostRes.data || []);
         setFoundItems(foundRes.data || []);
@@ -71,7 +71,7 @@ const LostAndFoundGallery = () => {
       {/* Image */}
       <div className="w-full h-44 overflow-hidden">
         <img
-          src={`http://localhost:5000${item.image}`}
+          src={`http://https://mern-jvn8.onrender.com${item.image}`}
           alt={item.itemName}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
