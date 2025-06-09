@@ -66,11 +66,7 @@ const Dashboard = () => {
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
-      setLostItems((prevItems) =>
-        prevItems.map((item) =>
-          item._id === editForm._id ? { ...item, ...response.data } : item
-        )
-      );
+        
       setSelectedItem(null);
     } catch (error) {
       console.error("Error updating lost item:", error.response?.data || error.message);
