@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://https://mern-jvn8.onrender.com/api/auth/login",
+        "https://mern-jvn8.onrender.com/api/auth/login",
         { email, password },
         { headers: { "Content-Type": "application/json" } }
       );
